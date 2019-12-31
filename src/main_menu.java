@@ -1,15 +1,20 @@
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Labeled;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import option_Implementations.Guess_Option;
+import option_Implementations.Select_Window_Option;
 
 public class main_menu extends Application 
 {
@@ -17,18 +22,21 @@ public class main_menu extends Application
 	{
 		launch(args);
 	}
-
+	//global variables 
 	Label welcomeL=new Label("Welcome to the inconvenient phone number entry application!"); 
 	Label instructionL=new Label("Please select a choice: ");
 	BorderPane root=new BorderPane();
 	VBox menu=new VBox(10);
 	GridPane options=new GridPane(); 
 	Button guessB=new Button("Guess");
+	Button selectionPanelB=new Button("Selection List"); 
+	
 	public void start(Stage myStage) 
 	{
-		Scene myScene=new Scene(root,500,500);
+		Scene myScene=new Scene(root,700,700);
 		options.setAlignment(Pos.CENTER);
-		options.add(guessB, 0,0);
+		options.setHgap(10);options.setVgap(10);
+		options.add(guessB, 0,0);options.add(selectionPanelB, 1, 0);
 		menu.getChildren().addAll(welcomeL,instructionL,options);
 		menu.setAlignment(Pos.CENTER);
 		root.setCenter(menu);
@@ -36,7 +44,7 @@ public class main_menu extends Application
 		
 		myStage.setScene(myScene);
 		myStage.show();
-		
+		//button functionalities
 		guessB.setOnAction(event->{
 			VBox guessWindow=new VBox(); 
 			guessWindow.setAlignment(Pos.CENTER);
@@ -52,6 +60,18 @@ public class main_menu extends Application
 			});
 			noB.setOnAction(event3->{
 				((Label) guessWindow.getChildren().get(1)).setText(Guess_Option.genNumber());
+			});
+		});
+		selectionPanelB.setOnAction(event->{
+			VBox selectWindow=new VBox(10); 
+			selectWindow.setAlignment(Pos.CENTER);
+			Select_Window_Option.createSelectWindowOption(selectWindow); 
+			Button submitB=new Button("Submit"); 
+			selectWindow.getChildren().addAll(submitB); 
+			root.setCenter(selectWindow);
+			
+			submitB.setOnAction(event2->{
+				Alert confirm=new Alert(AlertType.CONFIRMATION); 
 			});
 		});
 	}
