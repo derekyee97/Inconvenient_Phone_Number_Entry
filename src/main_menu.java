@@ -78,7 +78,7 @@ public class main_menu extends Application
 		});
 		incrementB.setOnAction(event->{
 			VBox incrementWindow=new VBox(10);
-			incrementWindow.setAlignment(Pos.CENTER);s
+			incrementWindow.setAlignment(Pos.CENTER);
 			
 		});
 	}
