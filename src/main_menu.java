@@ -79,6 +79,7 @@ public class main_menu extends Application
 		incrementB.setOnAction(event->{
 			VBox incrementWindow=new VBox(10);
 			incrementWindow.setAlignment(Pos.CENTER);
+			Increment_Option.createIncrementWindowOption(incrementWindow); 
 			
 		});
 	}
