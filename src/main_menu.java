@@ -30,13 +30,14 @@ public class main_menu extends Application
 	GridPane options=new GridPane(); 
 	Button guessB=new Button("Guess");
 	Button selectionPanelB=new Button("Selection List"); 
+	Button incrementB=new Button("Increment"); 
 	
 	public void start(Stage myStage) 
 	{
 		Scene myScene=new Scene(root,700,700);
 		options.setAlignment(Pos.CENTER);
 		options.setHgap(10);options.setVgap(10);
-		options.add(guessB, 0,0);options.add(selectionPanelB, 1, 0);
+		options.add(guessB, 0,0);options.add(selectionPanelB, 1, 0);options.add(incrementB, 2, 0);
 		menu.getChildren().addAll(welcomeL,instructionL,options);
 		menu.setAlignment(Pos.CENTER);
 		root.setCenter(menu);
@@ -71,8 +72,14 @@ public class main_menu extends Application
 			root.setCenter(selectWindow);
 			
 			submitB.setOnAction(event2->{
-				Alert confirm=new Alert(AlertType.CONFIRMATION); 
+				root.setCenter(menu);
+				
 			});
+		});
+		incrementB.setOnAction(event->{
+			VBox incrementWindow=new VBox(10);
+			incrementWindow.setAlignment(Pos.CENTER);s
+			
 		});
 	}
 	

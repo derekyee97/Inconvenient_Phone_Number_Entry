@@ -12,6 +12,7 @@ public class Select_Window_Option
 	{
 		GridPane mainWindow=new GridPane(); 
 		mainWindow.setAlignment(Pos.CENTER);
+		
 		mainWindow.setHgap(10);mainWindow.setVgap(10);
 		Label instructionL=new Label("Please select the option corresponding to the designated column to enter your phone number."); 
 		Label areaCode=new Label("Area Code"); 
