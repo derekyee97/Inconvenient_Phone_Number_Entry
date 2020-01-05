@@ -14,6 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import option_Implementations.Guess_Option;
+import option_Implementations.Increment_Option;
 import option_Implementations.Select_Window_Option;
 
 public class main_menu extends Application 
