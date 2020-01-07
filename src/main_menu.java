@@ -16,7 +16,12 @@ import javafx.stage.Stage;
 import option_Implementations.Guess_Option;
 import option_Implementations.Increment_Option;
 import option_Implementations.Select_Window_Option;
-
+import option_Implementations.Slider_Option;
+/*************************************************
+ * @author Derek Yee
+ * This is the main class that is used to run the program. 
+ * Utilizes JavaFX for GUI 
+ ************************************************/
 public class main_menu extends Application 
 {
 	public static void main(String[] args)
@@ -32,13 +37,15 @@ public class main_menu extends Application
 	Button guessB=new Button("Guess");
 	Button selectionPanelB=new Button("Selection List"); 
 	Button incrementB=new Button("Increment"); 
-	
+	Button sliderB=new Button("Slider"); 
+	Button returnB=new Button("Submit");
 	public void start(Stage myStage) 
 	{
 		Scene myScene=new Scene(root,700,700);
 		options.setAlignment(Pos.CENTER);
 		options.setHgap(10);options.setVgap(10);
 		options.add(guessB, 0,0);options.add(selectionPanelB, 1, 0);options.add(incrementB, 2, 0);
+		options.add(sliderB, 0, 1);
 		menu.getChildren().addAll(welcomeL,instructionL,options);
 		menu.setAlignment(Pos.CENTER);
 		root.setCenter(menu);
@@ -46,6 +53,7 @@ public class main_menu extends Application
 		
 		myStage.setScene(myScene);
 		myStage.show();
+		
 		//button functionalities
 		guessB.setOnAction(event->{
 			VBox guessWindow=new VBox(); 
@@ -68,20 +76,30 @@ public class main_menu extends Application
 			VBox selectWindow=new VBox(10); 
 			selectWindow.setAlignment(Pos.CENTER);
 			Select_Window_Option.createSelectWindowOption(selectWindow); 
-			Button submitB=new Button("Submit"); 
-			selectWindow.getChildren().addAll(submitB); 
+			selectWindow.getChildren().addAll(returnB); 
 			root.setCenter(selectWindow);
 			
-			submitB.setOnAction(event2->{
-				root.setCenter(menu);
-				
-			});
+			
 		});
 		incrementB.setOnAction(event->{
 			VBox incrementWindow=new VBox(10);
 			incrementWindow.setAlignment(Pos.CENTER);
 			Increment_Option.createIncrementWindowOption(incrementWindow); 
+			incrementWindow.getChildren().addAll(returnB);
+			root.setCenter(incrementWindow);
 			
+		});
+		sliderB.setOnAction(event->{
+			VBox sliderWindow=new VBox(10); 
+			sliderWindow.setAlignment(Pos.CENTER);
+			Slider_Option.createSliderWindowOption(sliderWindow); 
+			sliderWindow.getChildren().addAll(returnB); 
+			root.setCenter(sliderWindow);
+			
+		});
+		//used to return from whatever option to the main menu
+		returnB.setOnAction(event->{
+			root.setCenter(menu);
 		});
 	}
 	
