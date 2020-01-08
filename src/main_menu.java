@@ -39,13 +39,14 @@ public class main_menu extends Application
 	Button incrementB=new Button("Increment"); 
 	Button sliderB=new Button("Slider"); 
 	Button returnB=new Button("Submit");
+	Button inputFilesB=new Button("Input Files");
 	public void start(Stage myStage) 
 	{
 		Scene myScene=new Scene(root,700,700);
 		options.setAlignment(Pos.CENTER);
 		options.setHgap(10);options.setVgap(10);
 		options.add(guessB, 0,0);options.add(selectionPanelB, 1, 0);options.add(incrementB, 2, 0);
-		options.add(sliderB, 0, 1);
+		options.add(sliderB, 0, 1);options.add(inputFilesB, 1, 1);
 		menu.getChildren().addAll(welcomeL,instructionL,options);
 		menu.setAlignment(Pos.CENTER);
 		root.setCenter(menu);
