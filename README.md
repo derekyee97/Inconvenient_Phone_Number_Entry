@@ -8,4 +8,4 @@ Clips of all the options are shown below.
 
 ## Guessing Option
 
-![GIF of Guessing Option](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/guess_option.gif)
+![GIF of Guessing Option](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/guess_option.gif)
