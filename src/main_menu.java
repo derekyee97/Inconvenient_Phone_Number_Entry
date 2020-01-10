@@ -20,7 +20,7 @@ import option_Implementations.Slider_Option;
 /*************************************************
  * @author Derek Yee
  * This is the main class that is used to run the program. 
- * Utilizes JavaFX for GUI components
+ * Utilizes JavaFX for GUI components.
  ************************************************/
 public class main_menu extends Application 
 {
