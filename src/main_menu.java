@@ -98,6 +98,10 @@ public class main_menu extends Application
 			root.setCenter(sliderWindow);
 			
 		});
+		inputFilesB.setOnAction(event->{
+			VBox inputFilesWindow=new VBox(10); 
+			inputFilesWindow.setAlignment(Pos.CENTER);
+		});
 		//used to return from whatever option to the main menu
 		returnB.setOnAction(event->{
 			root.setCenter(menu);
