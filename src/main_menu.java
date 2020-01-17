@@ -13,6 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import option_Implementations.File_Option;
 import option_Implementations.Guess_Option;
 import option_Implementations.Increment_Option;
 import option_Implementations.Select_Window_Option;
@@ -101,6 +102,10 @@ public class main_menu extends Application
 		inputFilesB.setOnAction(event->{
 			VBox inputFilesWindow=new VBox(10); 
 			inputFilesWindow.setAlignment(Pos.CENTER);
+			File_Option.createFileOptionMenu(inputFilesWindow,myStage);
+			inputFilesWindow.getChildren().addAll(returnB); 
+			root.setCenter(inputFilesWindow);
+			
 		});
 		//used to return from whatever option to the main menu
 		returnB.setOnAction(event->{
