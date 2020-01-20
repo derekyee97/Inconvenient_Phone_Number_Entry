@@ -15,3 +15,7 @@ Clips of all the options are shown below.
 ## Selection List Option
 
 ![GIF OF SELECTION OPTION](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/list_option.gif)
+
+## Increment Option
+
+![GIF OF Increment OPTION](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/increment_option.gif)
