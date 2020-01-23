@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import option_Implementations.File_Option;
 import option_Implementations.Guess_Option;
 import option_Implementations.Increment_Option;
+import option_Implementations.Move_Window_Option;
 import option_Implementations.Select_Window_Option;
 import option_Implementations.Slider_Option;
 /*************************************************
@@ -107,6 +108,11 @@ public class main_menu extends Application
 			inputFilesWindow.getChildren().addAll(returnB); 
 			root.setCenter(inputFilesWindow);
 			
+		});
+		movableB.setOnAction(event->{
+			VBox moveWindow=new VBox(10); 
+			moveWindow.setAlignment(Pos.CENTER);
+			Move_Window_Option.createMoveWindow(myStage, myScene, moveWindow,root); 
 		});
 		//used to return from whatever option to the main menu
 		returnB.setOnAction(event->{
