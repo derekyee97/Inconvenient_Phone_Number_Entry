@@ -25,32 +25,41 @@ import javafx.util.Duration;
 
 public class Move_Window_Option 
 {
-	public static void createMoveWindow(Stage myStage, Scene myScene, VBox menu,BorderPane root)
+	public static void createMoveWindow(Stage myStage,VBox mainMenu, VBox menu,BorderPane root)
 	{
 		Pane canvas=new Pane();	
-		Circle circle1=new Circle(20,Color.ALICEBLUE);Circle circle2=new Circle(20,Color.MEDIUMVIOLETRED);
+		Circle circle1=new Circle(20,Color.BLUE);Circle circle2=new Circle(20,Color.RED);
 		Circle circle3=new Circle(20,Color.LIMEGREEN);Circle circle4=new Circle(20,Color.MEDIUMPURPLE); 
-		Circle circle5=new Circle(20,Color.CYAN);Circle circle6=new Circle(20,Color.GOLD);
+		Circle circle5=new Circle(20,Color.ORANGE);Circle circle6=new Circle(20,Color.GOLD);
 		Circle circle7=new Circle(20,Color.FUCHSIA); Circle circle8=new Circle(20,Color.FIREBRICK); 
 		Circle circle9=new Circle(20,Color.HOTPINK); Circle circle0=new Circle(20,Color.BLACK);
-		Label keyL=new Label("Color circle corresponds to the same color text number below: "); 
+		Label keyL=new Label("Please select the color circle corresponding to the number to enter each digit: "); 
 		Label zeroL=new Label("zero");Label oneL=new Label("one");Label twoL=new Label("two");
 		Label threeL=new Label("three");Label fourL=new Label("four");Label fiveL=new Label("five");
 		Label sixL=new Label("six");Label sevenL=new Label("seven");Label eightL=new Label("eight");
 		Label nineL=new Label("nine");
+		oneL.setTextFill(Color.BLUE);twoL.setTextFill(Color.RED);threeL.setTextFill(Color.LIMEGREEN);
+		fourL.setTextFill(Color.MEDIUMPURPLE);fiveL.setTextFill(Color.ORANGE);sixL.setTextFill(Color.GOLD);
+		sevenL.setTextFill(Color.FUCHSIA);eightL.setTextFill(Color.FIREBRICK);nineL.setTextFill(Color.HOTPINK);
+		oneL.setStyle("-fx-font-weight: bold");zeroL.setStyle("-fx-font-weight: bold");twoL.setStyle("-fx-font-weight: bold");
+		threeL.setStyle("-fx-font-weight: bold");fourL.setStyle("-fx-font-weight: bold");fiveL.setStyle("-fx-font-weight: bold");
+		sixL.setStyle("-fx-font-weight: bold");sevenL.setStyle("-fx-font-weight: bold");eightL.setStyle("-fx-font-weight: bold");nineL.setStyle("-fx-font-weight: bold");
+		HBox labelHold=new HBox(5,zeroL,oneL,twoL,threeL,fourL,fiveL,sixL,sevenL,eightL,nineL); 
+		labelHold.setAlignment(Pos.CENTER);
 		canvas.getChildren().addAll(circle1,circle2,circle3,circle4,circle5,circle6,circle7,circle8,circle9,circle0);
-		circle1.relocate(5, 5);circle2.relocate(300, 50);circle3.relocate(100, 200);
-		circle4.relocate(300, 300); circle5.relocate(250, 250); circle6.relocate(600, 200);
-		circle7.relocate(350, 350); circle8.relocate(5, 200); circle9.relocate(75,57);circle0.relocate(100,400);
+		circle1.relocate(5, 5);circle2.relocate(300, 50);circle3.relocate(175, 200);
+		circle4.relocate(300, 300); circle5.relocate(250, 250); circle6.relocate(300, 200);
+		circle7.relocate(350, 350); circle8.relocate(100,300); circle9.relocate(75,57);circle0.relocate(100,400);
 		canvas.setMinSize(200,300);
-		Label instructL=new Label ("Please select the number corresponding to your phone number in proper order : "); 
-		StringBuilder num=new StringBuilder(); 
+		StringBuilder num=new StringBuilder(); num.append("(");
 		Label phoneL=new Label("Your phone number is: ");
 		Label phoneNum=new Label(""); 
-		HBox holdNumLabel=new HBox(10,phoneL,phoneNum); 
+		Button delete=new Button("Delete"); 
+		Button submitB=new Button("Submit"); 
+		HBox holdNumLabel=new HBox(10,phoneL,phoneNum,delete); 
 		holdNumLabel.setAlignment(Pos.CENTER);
 		canvas.setStyle("-fx-background-color: #FFFFFF");
-		menu.getChildren().addAll(instructL,holdNumLabel,canvas);
+		menu.getChildren().addAll(keyL,labelHold,holdNumLabel,canvas,submitB);
 		menu.setPadding(new Insets(10));
 		root.setCenter(menu);
 		
@@ -126,8 +135,8 @@ public class Move_Window_Option
 	        }));
 		 final Timeline loop4 = new Timeline(new KeyFrame(Duration.millis(10), new EventHandler<ActionEvent>() {
 
-	            double deltaX =5;
-	            double deltaY =5;
+	            double deltaX =3;
+	            double deltaY =3;
 
 	            @Override
 	            public void handle(final ActionEvent t) {
@@ -297,43 +306,78 @@ public class Move_Window_Option
 	        loop0.setCycleCount(Timeline.INDEFINITE);loop0.play();
 	       circle0.setOnMouseClicked(event->{
 	    	   num.append("0");
+	    	   checkFormat(num);
 	    	   phoneNum.setText(num.toString());
 	       });
 	       circle1.setOnMouseClicked(event->{
 	    	   num.append("1");
+	    	   checkFormat(num);
 	    	   phoneNum.setText(num.toString());
 	       });
 	       circle2.setOnMouseClicked(event->{
 	    	   num.append("2");
+	    	   checkFormat(num);
 	    	   phoneNum.setText(num.toString());
 	       });
 	       circle3.setOnMouseClicked(event->{
 	    	   num.append("3");
+	    	   checkFormat(num);
 	    	   phoneNum.setText(num.toString());
 	       });
 	       circle4.setOnMouseClicked(event->{
 	    	   num.append("4");
+	    	   checkFormat(num);
 	    	   phoneNum.setText(num.toString());
 	       });
 	       circle5.setOnMouseClicked(event->{
 	    	   num.append("5");
+	    	   checkFormat(num);
 	    	   phoneNum.setText(num.toString());
 	       });
 	       circle6.setOnMouseClicked(event->{
 	    	   num.append("6");
+	    	   checkFormat(num);
 	    	   phoneNum.setText(num.toString());
 	       });
 	       circle7.setOnMouseClicked(event->{
 	    	   num.append("7");
+	    	   checkFormat(num);
 	    	   phoneNum.setText(num.toString());
 	       });
 	       circle8.setOnMouseClicked(event->{
 	    	   num.append("8");
+	    	   checkFormat(num);
 	    	   phoneNum.setText(num.toString());
 	       });
 	       circle9.setOnMouseClicked(event->{
 	    	   num.append("9");
+	    	   checkFormat(num);
 	    	   phoneNum.setText(num.toString());
 	       });
+	       
+	       delete.setOnAction(event->{
+	    	   if(num.length()==1)
+	    	   {
+	    	   }
+	    	   else
+	    	   {
+	    		   num.setLength(num.length()-1);
+	    		   phoneNum.setText(num.toString());
+	    	   }
+	       });
+	       submitB.setOnAction(event->{
+	    	   root.setCenter(mainMenu);
+	       });
+	}
+	private static void checkFormat(StringBuilder num)
+	{
+		if(num.length()==4)
+		{
+			num.append(")-"); 
+		}
+		else if(num.length()==9)
+		{
+			num.append("-");
+		}
 	}
 }

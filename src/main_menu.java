@@ -112,7 +112,7 @@ public class main_menu extends Application
 		movableB.setOnAction(event->{
 			VBox moveWindow=new VBox(10); 
 			moveWindow.setAlignment(Pos.CENTER);
-			Move_Window_Option.createMoveWindow(myStage, myScene, moveWindow,root); 
+			Move_Window_Option.createMoveWindow(myStage,menu, moveWindow,root); 
 		});
 		//used to return from whatever option to the main menu
 		returnB.setOnAction(event->{
