@@ -19,3 +19,6 @@ Clips of all the options are shown below.
 ## Increment Option
 
 ![GIF OF Increment OPTION](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/increment_option.gif)
+
+## Moving Option 
+![GIF OF MOVEMENT OPTION](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/moving_option.gif)
