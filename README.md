@@ -22,3 +22,7 @@ Clips of all the options are shown below.
 
 ## Moving Option 
 ![GIF OF MOVEMENT OPTION](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/moving_option.gif)
+
+
+## File Input Option
+![GIF OF MOVEMENT OPTION](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/file_input_option.gif)
