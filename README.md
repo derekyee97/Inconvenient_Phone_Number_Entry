@@ -28,4 +28,4 @@ Clips of all the options are shown below.
 ![GIF OF MOVEMENT OPTION](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/file_input_option.gif)
 
 ## File Input Option
-![GIF OF SLIDING OPTION] (https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/slider_option.gif)
+![GIF OF SLIDING OPTION](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/slider_option.gif)
