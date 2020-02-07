@@ -1,6 +1,6 @@
 # Inconvenient_Phone_Number_Entry
 
-A program demonstrating funny inconvenient ways to enter in a phone number. 
+A program demonstrating funny inconvenient ways to enter in a phone number that I have seen online.
 This application utilizes JavaFX for all its GUI components. 
 ## These implementations should NOT come to mind when creating a way to enter a phone number for data.
 
