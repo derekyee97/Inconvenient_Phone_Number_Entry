@@ -17,6 +17,7 @@ import option_Implementations.File_Option;
 import option_Implementations.Guess_Option;
 import option_Implementations.Increment_Option;
 import option_Implementations.Move_Window_Option;
+import option_Implementations.RanNum_Window_Option;
 import option_Implementations.Select_Window_Option;
 import option_Implementations.Slider_Option;
 /*************************************************
@@ -43,6 +44,7 @@ public class main_menu extends Application
 	Button returnB=new Button("Submit");
 	Button inputFilesB=new Button("Input Files");
 	Button movableB=new Button("Movable"); 
+	Button ranNum=new Button("Stop the Number"); 
 	public void start(Stage myStage) 
 	{
 		Scene myScene=new Scene(root,700,700);
@@ -113,6 +115,13 @@ public class main_menu extends Application
 			VBox moveWindow=new VBox(10); 
 			moveWindow.setAlignment(Pos.CENTER);
 			Move_Window_Option.createMoveWindow(myStage,menu, moveWindow,root); 
+		});
+		ranNum.setOnAction(event->{
+			VBox ranNumWindow=new VBox(10); 
+			ranNumWindow.setAlignment(Pos.CENTER);
+			RanNum_Window_Option.createRanNumWindow(ranNumWindow); 
+			ranNumWindow.getChildren().addAll(returnB); 
+			root.setCenter(ranNumWindow);
 		});
 		//used to return from whatever option to the main menu
 		returnB.setOnAction(event->{

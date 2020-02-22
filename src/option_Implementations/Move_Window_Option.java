@@ -65,8 +65,8 @@ public class Move_Window_Option
 		
 		 final Timeline loop1 = new Timeline(new KeyFrame(Duration.millis(10), new EventHandler<ActionEvent>() {
 
-	            double deltaX = 3;
-	            double deltaY = 3;
+	            double deltaX = 1;
+	            double deltaY = 1;
 
 	            @Override
 	            public void handle(final ActionEvent t) {
