@@ -44,7 +44,7 @@ public class main_menu extends Application
 	Button returnB=new Button("Submit");
 	Button inputFilesB=new Button("Input Files");
 	Button movableB=new Button("Movable"); 
-	Button ranNum=new Button("Stop the Number"); 
+	Button ranNumB=new Button("Stopper"); 
 	public void start(Stage myStage) 
 	{
 		Scene myScene=new Scene(root,700,700);
@@ -52,6 +52,7 @@ public class main_menu extends Application
 		options.setHgap(10);options.setVgap(10);
 		options.add(guessB, 0,0);options.add(selectionPanelB, 1, 0);options.add(incrementB, 2, 0);
 		options.add(sliderB, 0, 1);options.add(inputFilesB, 1, 1); options.add(movableB, 2, 1);
+		options.add(ranNumB, 0,2);
 		menu.getChildren().addAll(welcomeL,instructionL,options);
 		menu.setAlignment(Pos.CENTER);
 		root.setCenter(menu);
@@ -116,7 +117,7 @@ public class main_menu extends Application
 			moveWindow.setAlignment(Pos.CENTER);
 			Move_Window_Option.createMoveWindow(myStage,menu, moveWindow,root); 
 		});
-		ranNum.setOnAction(event->{
+		ranNumB.setOnAction(event->{
 			VBox ranNumWindow=new VBox(10); 
 			ranNumWindow.setAlignment(Pos.CENTER);
 			RanNum_Window_Option.createRanNumWindow(ranNumWindow); 
