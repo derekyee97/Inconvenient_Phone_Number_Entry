@@ -13,6 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import option_Implementations.CheckMark_Window_Option;
 import option_Implementations.File_Option;
 import option_Implementations.Guess_Option;
 import option_Implementations.Increment_Option;
@@ -44,7 +45,8 @@ public class main_menu extends Application
 	Button returnB=new Button("Submit");
 	Button inputFilesB=new Button("Input Files");
 	Button movableB=new Button("Movable"); 
-	Button ranNumB=new Button("Stopper"); 
+	//Button ranNumB=new Button("Stopper"); 
+	Button checkB=new Button("CheckMark"); 
 	public void start(Stage myStage) 
 	{
 		Scene myScene=new Scene(root,700,700);
@@ -52,7 +54,7 @@ public class main_menu extends Application
 		options.setHgap(10);options.setVgap(10);
 		options.add(guessB, 0,0);options.add(selectionPanelB, 1, 0);options.add(incrementB, 2, 0);
 		options.add(sliderB, 0, 1);options.add(inputFilesB, 1, 1); options.add(movableB, 2, 1);
-		options.add(ranNumB, 0,2);
+		options.add(checkB, 0,2);
 		menu.getChildren().addAll(welcomeL,instructionL,options);
 		menu.setAlignment(Pos.CENTER);
 		root.setCenter(menu);
@@ -117,12 +119,12 @@ public class main_menu extends Application
 			moveWindow.setAlignment(Pos.CENTER);
 			Move_Window_Option.createMoveWindow(myStage,menu, moveWindow,root); 
 		});
-		ranNumB.setOnAction(event->{
-			VBox ranNumWindow=new VBox(10); 
-			ranNumWindow.setAlignment(Pos.CENTER);
-			RanNum_Window_Option.createRanNumWindow(ranNumWindow); 
-			ranNumWindow.getChildren().addAll(returnB); 
-			root.setCenter(ranNumWindow);
+		checkB.setOnAction(event->{
+			VBox checkNumWindow=new VBox(10); 
+			checkNumWindow.setAlignment(Pos.CENTER);
+			CheckMark_Window_Option.createCheckMarkWindow(checkNumWindow); 
+			checkNumWindow.getChildren().addAll(returnB); 
+			root.setCenter(checkNumWindow);
 		});
 		//used to return from whatever option to the main menu
 		returnB.setOnAction(event->{
