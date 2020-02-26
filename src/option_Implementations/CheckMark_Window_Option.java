@@ -144,6 +144,10 @@ public class CheckMark_Window_Option
 		{
 			return 4;
 		}
+		//check 5
+		else if(check[3]==true && check[7]==true && check[11]==true && check[15]==true 
+				&& check[12]==true && check[13]==true && check[14]==true && check[9]==true && 
+				check[5]==true && check[17]==true && check[21]==true && check[25]==true)
 		return -1;
 	}
 	private static void setText(Label label, StringBuilder num) //
