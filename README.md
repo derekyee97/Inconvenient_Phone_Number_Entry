@@ -6,6 +6,9 @@ This application utilizes JavaFX for all its GUI components.
 
 Clips of all the options are shown below.
 ========================================================================================================
+## Checkmark Draw Option 
+
+![GIF of Checkmark_Option](https://github.com/derekyee97/Inconvenient_Phone_Number_Entry/blob/master/video_demos/check_option.gif)
 
 ## Guessing Option
 
