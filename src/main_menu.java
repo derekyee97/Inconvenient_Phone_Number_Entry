@@ -45,7 +45,6 @@ public class main_menu extends Application
 	Button returnB=new Button("Submit");
 	Button inputFilesB=new Button("Input Files");
 	Button movableB=new Button("Movable"); 
-	//Button ranNumB=new Button("Stopper"); 
 	Button checkB=new Button("CheckMark"); 
 	public void start(Stage myStage) 
 	{
