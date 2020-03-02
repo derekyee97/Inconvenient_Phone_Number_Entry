@@ -60,6 +60,7 @@ public class main_menu extends Application
 		
 		
 		myStage.setScene(myScene);
+		myStage.setFullScreen(true);
 		myStage.show();
 		
 		//button functionalities
@@ -121,7 +122,7 @@ public class main_menu extends Application
 		checkB.setOnAction(event->{
 			VBox checkNumWindow=new VBox(10); 
 			checkNumWindow.setAlignment(Pos.CENTER);
-			CheckMark_Window_Option.createCheckMarkWindow(checkNumWindow); 
+			CheckMark_Window_Option.createCheckMarkWindow(checkNumWindow,myStage); 
 			checkNumWindow.getChildren().addAll(returnB); 
 			root.setCenter(checkNumWindow);
 		});

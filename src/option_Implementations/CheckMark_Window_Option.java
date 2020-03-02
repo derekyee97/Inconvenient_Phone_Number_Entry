@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class CheckMark_Window_Option 
 {
@@ -43,7 +44,7 @@ public class CheckMark_Window_Option
 		}
 		
 	};
-	public static void createCheckMarkWindow(VBox window)
+	public static void createCheckMarkWindow(VBox window, Stage myStage)
 	{
 		//defining gridpanes to hold each digit of phone number, and filling with checkboxes 
 		GridPane firstD=new GridPane();genBoxes(firstD);GridPane secondD=new GridPane();genBoxes(secondD);
@@ -58,12 +59,10 @@ public class CheckMark_Window_Option
 		setText(phoneL, phoneNumber);
 		Image keyI=new Image("/resources/key.PNG");
 		ImageView key=new ImageView(keyI);
+		key.setFitWidth(1000);
 		Label instructL=new Label("Please draw each digit with check marks as displayed above");
 		window.getChildren().addAll(key, instructL,phoneL,holder); 
-		firstD.setOnMouseClicked(event->{
-			System.out.println("Clicked");
-		});
-				
+					
 	}
 	private static void genBoxes(GridPane digitHolder)
 	{
